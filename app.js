@@ -1,6 +1,7 @@
 const exp = require("constants");
 var express = require("express");
 var app = express();
+var port = process.env.port;
 
 
 
@@ -18,7 +19,7 @@ app.get("/home", function(req, res){
     res.send("This will be our homepage for now");
 });
 
-app.listen(5000, function(){
+app.listen(port, function(){
     console.log("Running on localhost 5000");
 });
 
